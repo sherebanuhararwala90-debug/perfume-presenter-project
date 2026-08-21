@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import heroBottle from "@/assets/hero-bottle.webp";
+import heroBottleSm from "@/assets/hero-bottle-sm.webp";
 import notesImg from "@/assets/notes.webp";
 import packagingImg from "@/assets/packaging.webp";
 
@@ -17,6 +18,22 @@ export const Route = createFileRoute("/")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+    ],
+    links: [
+      {
+        rel: "preload",
+        as: "image",
+        href: heroBottleSm,
+        media: "(max-width: 767px)",
+        fetchpriority: "high",
+      },
+      {
+        rel: "preload",
+        as: "image",
+        href: heroBottle,
+        media: "(min-width: 768px)",
+        fetchpriority: "high",
+      },
     ],
   }),
   component: Home,
@@ -94,12 +111,14 @@ function Home() {
 
           <img
             src={heroBottle}
+            srcSet={`${heroBottleSm} 760w, ${heroBottle} 1200w`}
             alt="The Whole Truth Parfums Truth No.1 eau de parfum bottle on a stone plinth"
             width={1200}
             height={800}
             fetchPriority="high"
             decoding="async"
             sizes="(min-width: 1024px) 560px, 100vw"
+            loading="eager"
             className="aspect-[3/2] w-full object-cover"
           />
         </section>
