@@ -114,6 +114,6 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 function RootComponent() {
-  {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+  // Required: nested routes render here. Removing <Outlet /> breaks all child routes.
   return <Outlet />;
 }
