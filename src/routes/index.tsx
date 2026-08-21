@@ -19,22 +19,6 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
     ],
-    links: [
-      {
-        rel: "preload",
-        as: "image",
-        href: heroBottleSm,
-        media: "(max-width: 767px)",
-        fetchpriority: "high",
-      },
-      {
-        rel: "preload",
-        as: "image",
-        href: heroBottle,
-        media: "(min-width: 768px)",
-        fetchpriority: "high",
-      },
-    ],
   }),
   component: Home,
 });
