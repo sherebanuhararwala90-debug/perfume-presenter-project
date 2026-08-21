@@ -4,9 +4,9 @@ import { useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import productMain from "@/assets/product-main.webp";
-import heroBottle from "@/assets/hero-bottle.webp";
-import notesImg from "@/assets/notes.webp";
-import packagingImg from "@/assets/packaging.webp";
+import thumbHero from "@/assets/thumb-hero.webp";
+import thumbNotes from "@/assets/thumb-notes.webp";
+import thumbPackaging from "@/assets/thumb-packaging.webp";
 
 const title = "Truth No.1 Eau de Parfum — 50ml | The Whole Truth Parfums";
 const description =
@@ -25,9 +25,9 @@ export const Route = createFileRoute("/product")({
 });
 
 const thumbs = [
-  { src: heroBottle, alt: "Truth No.1 perfume bottle by The Whole Truth Parfums in daylight" },
-  { src: packagingImg, alt: "Truth No.1 black gift box packaging by The Whole Truth Parfums" },
-  { src: notesImg, alt: "Bergamot, oud and jasmine notes inside Truth No.1 eau de parfum" },
+  { src: thumbHero, alt: "Truth No.1 perfume bottle by The Whole Truth Parfums in daylight" },
+  { src: thumbPackaging, alt: "Truth No.1 black gift box packaging by The Whole Truth Parfums" },
+  { src: thumbNotes, alt: "Bergamot, oud and jasmine notes inside Truth No.1 eau de parfum" },
 ];
 
 const benefits = [
@@ -65,10 +65,12 @@ function ProductPage() {
             <img
               src={productMain}
               alt="The Whole Truth Parfums Truth No.1 eau de parfum 50ml bottle on display"
-              width={1024}
-              height={1024}
+              width={900}
+              height={900}
               fetchPriority="high"
-              className="w-full object-cover"
+              decoding="async"
+              sizes="(min-width: 1024px) 560px, 100vw"
+              className="aspect-square w-full object-cover"
             />
             <div className="mt-4 grid grid-cols-3 gap-4">
               {thumbs.map((t) => (
@@ -76,8 +78,8 @@ function ProductPage() {
                   key={t.alt}
                   src={t.src}
                   alt={t.alt}
-                  width={512}
-                  height={512}
+                  width={320}
+                  height={320}
                   loading="lazy"
                   className="aspect-square w-full border border-border object-cover"
                 />

@@ -95,10 +95,12 @@ function Home() {
           <img
             src={heroBottle}
             alt="The Whole Truth Parfums Truth No.1 eau de parfum bottle on a stone plinth"
-            width={1536}
-            height={1024}
+            width={1200}
+            height={800}
             fetchPriority="high"
-            className="w-full object-cover"
+            decoding="async"
+            sizes="(min-width: 1024px) 560px, 100vw"
+            className="aspect-[3/2] w-full object-cover"
           />
         </section>
 
@@ -121,10 +123,11 @@ function Home() {
           <img
             src={notesImg}
             alt="Bergamot, oud wood chips and jasmine ingredients used in Truth No.1 by The Whole Truth Parfums"
-            width={1024}
-            height={768}
+            width={700}
+            height={525}
             loading="lazy"
-            className="w-full object-cover"
+            decoding="async"
+            className="aspect-[4/3] w-full object-cover"
           />
           <div>
             <p className="eyebrow">One line, honestly</p>
@@ -180,10 +183,11 @@ function Home() {
           <img
             src={packagingImg}
             alt="The Whole Truth Parfums Truth No.1 black gift box beside the perfume bottle"
-            width={1024}
-            height={1024}
+            width={900}
+            height={900}
             loading="lazy"
-            className="w-full object-cover"
+            decoding="async"
+            className="aspect-square w-full object-cover"
           />
         </section>
       </main>
