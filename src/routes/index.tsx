@@ -2,9 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import heroBottle from "@/assets/hero-bottle.jpg";
-import notesImg from "@/assets/notes.jpg";
-import packagingImg from "@/assets/packaging.jpg";
+import heroBottle from "@/assets/hero-bottle.webp";
+import notesImg from "@/assets/notes.webp";
+import packagingImg from "@/assets/packaging.webp";
 
 const title = "The Whole Truth Parfums — Truth No.1 Oud & Bergamot Eau de Parfum";
 const description =

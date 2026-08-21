@@ -3,10 +3,10 @@ import { useState } from "react";
 
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import productMain from "@/assets/product-main.jpg";
-import heroBottle from "@/assets/hero-bottle.jpg";
-import notesImg from "@/assets/notes.jpg";
-import packagingImg from "@/assets/packaging.jpg";
+import productMain from "@/assets/product-main.webp";
+import heroBottle from "@/assets/hero-bottle.webp";
+import notesImg from "@/assets/notes.webp";
+import packagingImg from "@/assets/packaging.webp";
 
 const title = "Truth No.1 Eau de Parfum — 50ml | The Whole Truth Parfums";
 const description =
