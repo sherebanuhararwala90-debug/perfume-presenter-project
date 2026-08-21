@@ -87,12 +87,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap",
-      },
+      // Web fonts removed: the third-party stylesheet was render-blocking
+      // (~1.35s on mobile) and caused layout shift. We use system stacks now.
+
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),

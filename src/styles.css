@@ -59,8 +59,9 @@
   --gold: oklch(0.72 0.1 82);
   --ink: oklch(0.19 0.008 60);
   --sand: oklch(0.93 0.017 84.5);
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-body: "Jost", ui-sans-serif, system-ui, sans-serif;
+  --font-display: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+
   --shadow-soft: 0 24px 60px -30px oklch(0.19 0.008 60 / 0.45);
 }
 
